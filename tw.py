@@ -215,7 +215,7 @@ if author == "":
   t.write(token)
 else:
   print(Colorate.Diagonal(Colors.white_to_black, "=================================================="))
-  print(Colorate.Diagonal(Colors.red_to_white, "Nhập [1] Để Vào Tool TikTok "))
+  print(Colorate.Diagonal(Colors.red_to_white, "Nhập [1] Để Vào Tool Linkedin "))
   print(Colorate.Diagonal(Colors.red_to_white, "Nhập [2] Để Thay Auth Golike Mới "))
   print(Colorate.Diagonal(Colors.white_to_black,"=================================================="))
   
@@ -240,7 +240,7 @@ Authorization.close()
 t.close()
 os.system('cls' if os.name== 'nt' else 'clear')
 banner()
-print("\033[1;32mDanh Sách Acc Snap Hiện Có 🍉")
+print("\033[1;32mDanh Sách Acc Linkedin Hiện Có 🍉")
 print("\033[97m==================================")
 headers = {
     'Accept': 'application/json, text/plain, */*',
