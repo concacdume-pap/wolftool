@@ -188,7 +188,7 @@ if author == "":
   t.write(token)
 else:
   print(Colorate.Diagonal(Colors.white_to_black, "=================================================="))
-  print(Colorate.Diagonal(Colors.red_to_white, "Nhập [1] Để Vào Tool Threads "))
+  print(Colorate.Diagonal(Colors.red_to_white, "Nhập [1] Để Vào Tool Golike Threads "))
   print(Colorate.Diagonal(Colors.red_to_white, "Nhập [2] Để Thay Auth Golike Mới "))
   print(Colorate.Diagonal(Colors.white_to_black,"=================================================="))
   
