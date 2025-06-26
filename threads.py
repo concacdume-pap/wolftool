@@ -357,13 +357,7 @@ while True:
     break
   except:
     print("\033[1;31m Sai Định Dạng ")
-# Nhập proxy
-proxy_input = input("\033[1;32mNhập proxy (host:port hoặc user:pass@host:port), Enter nếu không dùng đến : \033[0m").strip()
-proxies = {
-    "http": f"http://{proxy_input}",
-    "https": f"http://{proxy_input}"
-} if proxy_input else None
-
+    
 print("\033[1;33m         CHỌN JOB ĐỂ LÀM KIẾM TIỀN")
 print("")
 print("\033[1;36mNhập \033[1;39m[\033[1;36m1\033[1;39m] Thực Hiện NV \033[1;33mFollow ➕ ")
