@@ -310,7 +310,7 @@ def dsacc():
     print("\033[1;31mAuthorization hoăc T sai 😂")
     quit()
   for i in range(len(chontktiktok["data"])):
-    print(Colorate.Diagonal(Colors.green_to_red,f"[{i+1}] {chontktiktok["data"][i]["screen_name"]} | 🍉 Online"))
+    print(Colorate.Diagonal(Colors.green_to_red,f"[{i+1}] {chontktiktok["data"][i]["name"]} | 🍉 Online"))
 dsacc() 
 print("\033[97m==================================")
 while True:
