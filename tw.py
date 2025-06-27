@@ -19,6 +19,7 @@ try:
     from rich.panel import Panel
     from rich.text import Text
     from rich import box
+    from rich.table import Table
     from colorama import init
     from pystyle import Colors, Colorate
 except ModuleNotFoundError as e:
