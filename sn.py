@@ -240,7 +240,7 @@ Authorization.close()
 t.close()
 os.system('cls' if os.name== 'nt' else 'clear')
 banner()
-print("\033[1;32mDanh Sách Acc Tik Tok Hiện Có 🍉")
+print("\033[1;32mDanh Sách Acc SnapChat Hiện Có 🍉")
 print("\033[97m==================================")
 headers = {
     'Accept': 'application/json, text/plain, */*',
@@ -452,11 +452,25 @@ while True:
         if second < 10:
             s = "0" + str(second)
                                       
-        chuoi = (f"\033[1;31m| \033[1;33m{dem} \033[1;31m| \033[1;36m{h}:{m}:{s} \033[1;31m| \033[1;34mSUCCESS \033[1;31m| \033[1;32m+{tien}đ \033[1;31m| \033[1;35m{tong} vnđ")
-                
+        thoigian = time.strftime("%H:%M:%S", time.localtime())
+        console = Console()                             
+        table = Table(show_header=True, header_style="bold magenta")
+        table.add_column("STT", style="bold yellow")
+        table.add_column("Thời gian", style="cyan")
+        table.add_column("Status", style="green")
+        table.add_column("Tiền ", style="bold green")
+        table.add_column("Tổng Tiền", style="bold white")
+        table.add_row(
+        str(dem),
+        thoigian,
+        "[green]SUCCESS[/green]",
+        f"[bold green]+{tien}đ",
+        f"[bold yellow]{tong} vnđ"
+    )
 
-        print("                                                    ", end="\r")
-        print(chuoi)
+        os.system('cls' if os.name == 'nt' else 'clear')
+        banner()
+        console.print(table)
         time.sleep(0.7)
         checkdoiacc = 0
     else:
@@ -467,5 +481,3 @@ while True:
             checkdoiacc += 1
         except:
             pass
-
-
