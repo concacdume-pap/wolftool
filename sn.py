@@ -18,6 +18,7 @@ try:
     from rich.console import Console
     from rich.panel import Panel
     from rich.text import Text
+    from rich.table import Table
     from rich import box
     from colorama import init
     from pystyle import Colors, Colorate
