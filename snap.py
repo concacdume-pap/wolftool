@@ -119,34 +119,12 @@ BLUE = "\033[94m"
 AQUA = "\033[96m"
 LIME = "\033[92m"
 
-def xoss(z):
-    for e in z + '\n':
-        sys.stdout.write(e)
-        sys.stdout.flush()
-        time.sleep(0.005)
-os.system('cls' if os.name == 'nt' else 'clear')
-xoss("\nVui Lòng Chờ... ")
-sleep(1.5)
-os.system('cls' if os.name == 'nt' else 'clear')
-for i in range(1, 101):
-  sys.stdout.write(f"\r{BOLD}{LIME}ĐANG LOAD TOOL + GIT +: [{i}% {'█' * (i // 2)}]{RESET}")
-  sys.stdout.flush()
-  sleep(0.03)  # Điều chỉnh thời gian chờ nếu cần
-sleep(1)
-import os
-os.system("cls" if os.name == "nt" else "clear")
-def xoss(z):
-    for e in z + '\n':
-        sys.stdout.write(e)
-        sys.stdout.flush()
-        time.sleep(0.005)
-xoss('\n[●] Đang Load File Cần Thiết... ');time.sleep(0.10)
-sleep(1.5)
-
-os.system('cls' if os.name== 'nt' else 'clear')
-def Update():
-    exit('●] Đang Tiến Hành Vào Tool...... ')
-
+# Nhập proxy
+proxy_input = input("\033[1;32mNhập proxy cho sever tool (host:port hoặc user:pass@host:port), Enter nếu không dùng đến : \033[0m").strip()
+proxies = {
+    "http": f"http://{proxy_input}",
+    "https": f"http://{proxy_input}"
+} if proxy_input else None
 sleep(1)
 colors = [
     "\033[1;37m\033[1m",  # Trắng
