@@ -593,6 +593,12 @@ if checkurl1['status']== 200 :
             INSTAGRAM()
         elif choose == 2:
                 os.remove('user.txt')
+# Nhập proxy
+proxy_input = input("\033[1;32mNhập proxy cho sever tool (host:port hoặc user:pass@host:port), Enter nếu không dùng đến : \033[0m").strip()
+proxies = {
+    "http": f"http://{proxy_input}",
+    "https": f"http://{proxy_input}"
+} if proxy_input else None
 else:
     print(Fore.RED+'DANG NHAP THAT BAI')
     os.remove('user.txt')
