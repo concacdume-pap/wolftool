@@ -140,15 +140,19 @@ def INSTAGRAM():
                                 prices = response['data']['prices']
                                 tong += prices
 
-                                chuoi = (
-                                    f"\033[1;31m| \033[1;36m{dem}\033[1;31m\033[1;97m | "
-                                    f"\033[1;33m{h}:{m}:{s}\033[1;31m\033[1;97m  | "
-                                    f"\033[1;32msuccess\033[1;31m\033[1;97m | "
-                                    f"\033[1;31mfollow\033[1;31m\033[1;32m\033[1;97m | "
-                                    f"\033[1;32m Ẩn ID\033[1;97m | \033[1;32m+{prices} \033[1;97m| "
-                                    f"\033[1;33m{tong} vnđ"
-                                )
-                                print(chuoi)
+                                
+                              # Thêm vào bảng
+                                table_data.append([
+                                dem,
+                                f"{h}:{m}:{s}",
+                                "success",
+                                 follow,
+                                "Ẩn ID",
+                               f"+{prices}",
+                               f"{tong} vnđ"
+                               ])
+                               print(tabulate(table_data[-1:], headers=["STT", "Time", "Status", "Job", "ID", "Xu", "Tổng"], tablefmt="fancy_grid"))
+
                             else:
                                 # Xử lý skip job
                                 skipjob = 'https://gateway.golike.net/api/advertising/publishers/twitter/skip-jobs'
@@ -205,7 +209,7 @@ def INSTAGRAM():
                                 dem,
                                 f"{h}:{m}:{s}",
                                 "success",
-                                 job_type,
+                                 like,
                                 "Ẩn ID",
                                f"+{prices}",
                                f"{tong} vnđ"
