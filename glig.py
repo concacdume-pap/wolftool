@@ -151,7 +151,7 @@ def INSTAGRAM():
                                f"+{prices}",
                                f"{tong} vnđ"
                                ])
-                               print(tabulate(table_data[-1:], headers=["STT", "Time", "Status", "Job", "ID", "Xu", "Tổng"], tablefmt="fancy_grid"))
+                                print(tabulate(table_data[-1:], headers=["STT", "Time", "Status", "Job", "ID", "Xu", "Tổng"], tablefmt="fancy_grid"))
 
                             else:
                                 # Xử lý skip job
@@ -203,7 +203,6 @@ def INSTAGRAM():
                                h, m, s = [f"{t:02d}" for t in (local_time.tm_hour, local_time.tm_min, local_time.tm_sec)]
                                prices = response['data']['prices']
                                tong += prices
-
                               # Thêm vào bảng
                                table_data.append([
                                 dem,
